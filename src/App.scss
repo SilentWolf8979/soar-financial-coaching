@@ -1,0 +1,366 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belleza&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
+
+$brandBeige: #cedbb0;
+$brandBlack: #000000;
+$brandForestGreen: #054a29;
+$brandLightGreen: #79f6ba;
+$brandDarkBlue: #092a48;
+$brandLightBlue: #bbdcdf;
+$brandOliveGreen: #7fa67a;
+$brandLightOliveGreen: #b8ceb6;
+$brandOrange: #df5a01;
+$brandLightOrange: #fe9d5d;
+$brandWhite: #ffffff;
+
+$brandPrimaryColor: $brandOliveGreen;
+$brandPrimaryColorActive: $brandLightOliveGreen;
+$brandSecondaryColor: $brandDarkBlue;
+$brandSecondaryColorActive: $brandLightBlue;
+
+$brandPrimaryCtaColor: $brandOrange;
+$brandPrimaryCtaColorActive: $brandLightOrange;
+$brandSecondaryCtaColor: $brandLightBlue;
+$brandSecondaryCtaColorActive: $brandLightBlue;
+$brandLinkColor: $brandSecondaryColor;
+$brandLinkColorActive: $brandSecondaryColorActive;
+
+$brandPrimaryFontFamily: Raleway;
+$brandSecondaryFontFamily: Belleza;
+$brandPrimaryFontColor: $brandBlack;
+$brandSecondaryFontColor: $brandWhite;
+
+$brandHeroImage: url("images/heroBeachAtSunrise2.jpg");
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+html, body {
+  background-color: $brandBeige;
+  font-family: $brandPrimaryFontFamily;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.App {
+  flex: 1;
+  margin: 86px 0 0 0;
+  text-align: center;
+}
+
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+//   color: wheat;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+
+a {
+  color: $brandLinkColor;
+
+  &:hover {
+    color: $brandLinkColorActive;
+    text-decoration: none;
+  }
+}
+
+
+.navbar {
+  padding: 0;
+
+  .header {
+    background-color: $brandPrimaryColor;
+    color: $brandSecondaryFontColor;
+    display: flex;
+    width: 100%;
+
+    p {
+      font-family: Petit Formal Script;
+      position: relative;
+      top: 0.5em;
+    }
+  }
+
+  .navbarFull {
+    background-color: $brandDarkBlue;
+    padding: 0.25em 0;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    left: 2.5em;
+    position: fixed;
+    top: 1.9em;
+
+    p {
+      color: $brandSecondaryFontColor; //$brandLightBlue;
+      margin-left: 0.25em;
+      position: relative;
+      top: 0.25em;
+    }
+
+    svg {
+      height: 1.5em;
+      position: relative;
+      top: 0.2em;
+    }
+  }
+
+  .navbar-nav {
+    background-color: $brandWhite;
+    padding: 0 2em 1em 2em;
+    width: 275px;
+
+    .nav-link {
+      color: $brandPrimaryFontColor;
+      //font-weight: bold;
+    }
+  }
+
+  .navbar-toggler {
+    border: 0;
+    color: $brandLightBlue;
+    margin-left: 0.5em;
+    margin-top: 0.25em;
+  }
+
+  .btn {
+    background-color: $brandWhite;
+    border-color: $brandWhite;
+    color: $brandPrimaryFontColor;
+    margin-right: 0.5em;
+
+    &:hover {
+      background-color: $brandSecondaryCtaColorActive;
+      border-color: $brandSecondaryCtaColorActive;
+    }
+  }
+}
+
+.jumbotron {
+  border-radius: 0;
+  height: 25em;
+  position: relative; 
+
+  &::before {
+    background-image: $brandHeroImage;
+    background-size: cover;
+    border-radius: 0;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  h1 {
+    color: $brandDarkBlue;
+    font-family: $brandSecondaryFontFamily;
+    font-size: 50px;
+    position: relative;
+  }
+
+  p {
+    color: $brandDarkBlue;
+    font-size: larger;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .btn {
+    position: relative;
+    top: -1.25em;
+  }
+}
+
+.homeContent {
+  margin: 0 1em;
+  position: relative;
+  top: -5em;
+}
+
+.pageContent {
+  margin: 1em 2em 0 2em;
+  position: relative;
+
+  p {
+    padding-left: 1em;
+    text-align: left;
+    text-indent: -1em;
+  }
+
+  .accordion {
+    margin-bottom: 2em;
+    text-align: left;
+
+    .card-header {
+      background-color: $brandSecondaryCtaColor;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  .subtitle {
+    font-size:x-large;
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  background-color: $brandPrimaryCtaColor;
+  border-color: $brandPrimaryCtaColor;
+  color: $brandSecondaryFontColor;
+
+  &:hover {
+    background-color: $brandPrimaryCtaColorActive;
+    border-color: $brandPrimaryCtaColorActive;
+  }
+}
+
+.cta {
+  background-color: $brandWhite;
+  border: 2px solid $brandDarkBlue;
+  border-radius: 0.5em;
+  margin: 1em;
+  padding: 0.75em;
+
+  p {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+.ctaImage {
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.ctaSteps {
+  margin-bottom:  3em;
+
+  img {
+    height: 5em;
+    margin-bottom: 2em;
+  }
+
+  .heading {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+.ctaTextOnly {
+  margin: 3em 0;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.footerNav {
+  background-color: $brandDarkBlue;
+  font-size: 0.75em;
+  overflow: hidden;
+  width: 100%;
+
+  .logoLink {
+    display: inline-block;
+    left: 1em;
+    position: relative;
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  .wrappedText {
+    display: inline-block;
+    line-height: 1.1em;
+  }
+
+  .text-center {
+    padding: 0.5em;
+  }
+
+  .nav-link {
+    padding: 0;
+  }
+
+  a {
+    color: $brandPrimaryColor;
+
+    &:hover {
+      color: $brandPrimaryColorActive;
+    }
+  }
+
+  svg {
+    height: 5em;
+    width: 5em;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+  .jumbotron {
+    h1 {
+      margin-top: 1em;
+    }
+  }
+
+  .homeContent {
+    margin: 0 3em;
+  }
+
+  .pageContent {
+    margin: 1em 5em 0 5em;
+  }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  .jumbotron {
+    h1 {
+      margin-top: 2em;
+    }
+  }
+
+  .homeContent {
+    margin: 0 5em;
+  }
+ }
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
