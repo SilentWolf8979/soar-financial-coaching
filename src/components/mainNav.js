@@ -8,7 +8,7 @@ function MainNav() {
     return (
       <Navbar expand='' fixed='top' className='justify-content-left'>
         <div className='header justify-content-center'>
-          <p>Reflect.&nbsp;&nbsp;&nbsp;Grow.&nbsp;&nbsp;&nbsp;Learn.&nbsp;&nbsp;&nbsp;Soar.</p>
+          <p>Reflect.&nbsp;&nbsp;&nbsp;Learn.&nbsp;&nbsp;&nbsp;Grow.&nbsp;&nbsp;&nbsp;Soar.</p>
         </div>
         <div className='navbarFull'>
           <Navbar.Toggle aria-controls='main-navbar-nav'>
@@ -27,11 +27,12 @@ function MainNav() {
         <Navbar.Collapse id='main-navbar-nav'>
           <Nav>
             <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href='/book'>Book Your Consultation</Nav.Link>
+            <Nav.Link href='/book'>Book Your Complimentary Consultation</Nav.Link>
             <Nav.Link href='/about'>About</Nav.Link>
             <Nav.Link href='/contact'>Contact</Nav.Link>
             <Nav.Link href='/whatIs'>What Is A Financial Coach?</Nav.Link>
-            <Nav.Link href='/bio'>My Bio</Nav.Link>
+            <Nav.Link href='/content'>Content</Nav.Link>
+            <Nav.Link href='/services'>Services Offered</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
