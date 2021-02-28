@@ -296,7 +296,12 @@ a {
 }
 
 .ctaService {
+  height: 100%;
   margin: 1em 0;
+
+  .title {
+    font-weight: bold;
+  }
 }
 
 .ctaTextOnly {
@@ -382,8 +387,12 @@ a {
     margin: 1em 5em 0 5em;
   }
 
+  .pageContent.narrowMargin {
+    margin: 1em 2em 0 2em;
+  }
+
   .ctaService {
-    margin: 1em;
+    margin: 0.5em;
   }
  }
 
