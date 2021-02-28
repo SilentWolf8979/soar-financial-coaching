@@ -281,6 +281,14 @@ a {
   }
 }
 
+.ctaImage.hideSmall {
+  display: none;
+}
+
+.ctaImage.hideLarge {
+  display: block;
+}
+
 .ctaSteps {
   margin-bottom:  3em;
 
@@ -413,6 +421,14 @@ a {
       margin: 0;
       padding: em;
     }
+  }
+
+  .ctaImage.hideSmall {
+    display: block;
+  }
+
+  .ctaImage.hideLarge {
+    display: none;
   }
 }
 

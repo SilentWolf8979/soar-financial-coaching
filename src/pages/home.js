@@ -129,7 +129,7 @@ function Home() {
               </h4>
             </Col>
           </Row>
-          <Row className='justify-content-center text-left'>
+          <Row className='align-items-center justify-content-center text-left'>
             <Col xs={12} md={7}>
               <Row>
                 <Col>
@@ -149,7 +149,7 @@ function Home() {
                 </Col>
               </Row>
             </Col>
-            <Col xs={12} md={5} className='ctaImage'>
+            <Col md={5} className='ctaImage hideSmall'>
               <Image src="../images/ctaBlueFootball.jpg"></Image>
             </Col>
           </Row>
@@ -159,6 +159,9 @@ function Home() {
                 <b>Offense:</b> Scoring the goal is the most exciting time of the game! Once you are working your plan and your debt is gone, 
                 it is time to save and invest and let compound interest work in your favor. Enjoy this stage of wealth building and ridiculously generous giving!
               </p>
+            </Col>
+            <Col xs={12} className='ctaImage hideLarge'>
+              <Image src="../images/ctaBlueFootball.jpg"></Image>
             </Col>
           </Row>
 
