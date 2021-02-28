@@ -7,7 +7,7 @@ function Services() {
         <div className='pageContent'>
           <h2>Services Offered</h2>
           <br />
-          <Row>
+          <Row className='justify-content-center'>
             <Col xs={12} md={5} lg={3} className='cta ctaService'>
               <Link to='/services/speaking'>Speaking Engagements</Link>
             </Col>
