@@ -28,7 +28,7 @@ function Speaking() {
           or any other group you think would enjoy these talks, email Soar Financial Coaching today to schedule your event.
         </p>
         <br/>
-        <Button href='mailto:SoarFinancialcoaching@gmail.com'>E-Mail Me</Button>
+        <Button href='mailto:SoarFinancialcoaching@gmail.com' className='btnEmail'>E-Mail Me</Button>
         <br/>
         <br/>
         <br/>

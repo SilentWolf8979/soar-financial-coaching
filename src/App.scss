@@ -22,7 +22,7 @@ $brandSecondaryColorActive: $brandLightBlue;
 
 $brandPrimaryCtaColor: $brandOrange;
 $brandPrimaryCtaColorActive: $brandLightOrange;
-$brandSecondaryCtaColor: $brandLightBlue;
+$brandSecondaryCtaColor: $brandDarkBlue;
 $brandSecondaryCtaColorActive: $brandLightBlue;
 $brandLinkColor: $brandSecondaryColor;
 $brandLinkColorActive: $brandSecondaryColorActive;
@@ -279,6 +279,18 @@ a {
   &:hover {
     background-color: $brandPrimaryCtaColorActive;
     border-color: $brandPrimaryCtaColorActive;
+  }
+}
+
+.btnEmail {
+  background-color: $brandSecondaryCtaColor;
+  border-color: $brandSecondaryCtaColor;
+  color: $brandSecondaryFontColor;
+
+  &:hover {
+    background-color: $brandSecondaryCtaColorActive;
+    border-color: $brandSecondaryCtaColorActive;
+    color: $brandBlack;
   }
 }
 

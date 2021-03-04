@@ -21,7 +21,7 @@ function FinancialPeaceU() {
           Contact me to create your FPU class today!
         </p>
         <br/>
-        <Button href='mailto:SoarFinancialcoaching@gmail.com'>E-Mail Me</Button>
+        <Button href='mailto:SoarFinancialcoaching@gmail.com' className='btnEmail'>E-Mail Me</Button>
         <br/>
         <br/>
         <br/>
