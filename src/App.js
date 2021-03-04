@@ -15,9 +15,9 @@ import Home from './pages/home.js';
 import Legal from './pages/legal.js';
 import Services from './pages/services.js';
 import WhatIs from './pages/whatIs.js';
-import Custom from './pages/services/custom.js'
+import CustomCoaching from './pages/services/custom-coaching.js'
 import DebtElimination from './pages/services/debt-elimination.js'
-import FPUClasses from './pages/services/fpu-classes.js'
+import FinancialPeaceU from './pages/services/financial-peace-university.js'
 import LaunchingAdulthood from './pages/services/launching-into-adulthood.js'
 import MoneyMarriage from './pages/services/money-and-marriage.js'
 import Speaking from './pages/services/speaking.js'
@@ -28,9 +28,9 @@ function App() {
       <MainNav />
       
       <Switch>
-        <Route path='/services/custom' render={() => <Custom/>}/>
+        <Route path='/services/custom-coaching' render={() => <CustomCoaching/>}/>
         <Route path='/services/debt-elimination' render={() => <DebtElimination/>}/>
-        <Route path='/services/fpu-classes' render={() => <FPUClasses/>}/>
+        <Route path='/services/financial-peace-university' render={() => <FinancialPeaceU/>}/>
         <Route path='/services/launching-into-adulthood' render={() => <LaunchingAdulthood/>}/>
         <Route path='/services/money-and-marriage' render={() => <MoneyMarriage/>}/>
         <Route path='/services/speaking' render={() => <Speaking/>}/>

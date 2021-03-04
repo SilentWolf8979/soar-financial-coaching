@@ -23,7 +23,7 @@ function WhatIs() {
     <div className="App">
       <div className='pageContent'>
         <h2>What is a financial coach?</h2>
-        <br />
+        <br/>
         <Accordion defaultActiveKey="0">
           <Card ref={myRef0} id='card0'>
             <Accordion.Toggle as={Card.Header} onClick={() => executeScroll(myRef0)} variant="link" eventKey="0">

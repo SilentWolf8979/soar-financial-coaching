@@ -222,13 +222,31 @@ a {
 }
 
 .pageContent {
-  margin: 1em 2em 0 2em;
+  margin: 1em 2em 2em 2em;
   position: relative;
 
   p {
     padding-left: 1em;
     text-align: left;
     text-indent: -1em;
+
+    &.center {
+      padding-left: 0;
+      text-align: center;
+      text-indent: 0;
+    }
+  }
+
+  img {
+    height: auto;
+    margin-bottom: 2em;
+    max-width: 25em;
+    width: 100%;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    text-align: left;
   }
 
   .accordion {
@@ -245,6 +263,11 @@ a {
   .subtitle {
     font-size:x-large;
     text-decoration: underline;
+  }
+
+  .quote {
+    font-style: italic;
+    margin-bottom: 0;
   }
 }
 
@@ -279,14 +302,14 @@ a {
     margin-bottom: 1.5em;
     width: 100%;
   }
-}
 
-.ctaImage.hideSmall {
-  display: none;
-}
-
-.ctaImage.hideLarge {
-  display: block;
+  &.hideSmall {
+    display: none;
+  }
+  
+  &.hideLarge {
+    display: block;
+  }
 }
 
 .ctaSteps {
@@ -392,11 +415,11 @@ a {
   }
 
   .pageContent {
-    margin: 1em 5em 0 5em;
+    margin: 1em 5em 2em 5em;
   }
 
   .pageContent.narrowMargin {
-    margin: 1em 2em 0 2em;
+    margin: 1em 2em 2em 2em;
   }
 
   .ctaService {
