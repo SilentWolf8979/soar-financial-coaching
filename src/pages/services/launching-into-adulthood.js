@@ -1,4 +1,5 @@
 import { Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function LaunchingAdulthood() {
   return (
@@ -6,6 +7,8 @@ function LaunchingAdulthood() {
       <div className='pageContent'>
         <Image src="../images/headShot.jpg"></Image>
         <h2>Launching Into Adulthood</h2>
+        <br/>
+        <Link to='/services' className='breadcrumb'>Back to Services Offered</Link>
         <br/>
         <p>
           Launching Into Adulthood is coaching intended for high school and college students as well as young adults who opt for alternate pathways to the workforce. 

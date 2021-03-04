@@ -271,6 +271,18 @@ a {
   }
 }
 
+.breadcrumb {
+  background-color: unset;
+  color: $brandSecondaryColor;
+  font-size: smaller;
+  font-style: italic;
+  padding: 0;
+
+  &:hover {
+    color: $brandPrimaryColor;
+  }
+}
+
 .btn {
   background-color: $brandPrimaryCtaColor;
   border-color: $brandPrimaryCtaColor;

@@ -1,4 +1,5 @@
 import { Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function FinancialPeaceU() {
   return (
@@ -6,6 +7,8 @@ function FinancialPeaceU() {
       <div className='pageContent'>
         <Image src="../images/headShot.jpg"></Image>
         <h2>Financial Peace University</h2>
+        <br/>
+        <Link to='/services' className='breadcrumb'>Back to Services Offered</Link>
         <br/>
         <p className='center'>
           Are you looking for someone to teach Dave Ramsey’s <u>Financial Peace University</u> at your church or organization? 

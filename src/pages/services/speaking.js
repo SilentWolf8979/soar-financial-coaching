@@ -1,4 +1,5 @@
 import { Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Speaking() {
   return (
@@ -6,6 +7,8 @@ function Speaking() {
       <div className='pageContent'>
         <Image src="../images/headShot.jpg"></Image>
         <h2>Speaking Engagements</h2>
+        <br/>
+        <Link to='/services' className='breadcrumb'>Back to Services Offered</Link>
         <br/>
         <p>
           The first time I learned the basics of budgeting was at a MOPS (Mothers of Pre-Schoolers) meeting. 
