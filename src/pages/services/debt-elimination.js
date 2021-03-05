@@ -8,7 +8,11 @@ function DebtElimination() {
         <Image src="../images/ctaHandcuffs.jpg"></Image>
         <h2>Debt Elimination</h2>
         <br/>
-        <Link to='/services' className='breadcrumb'>Back to Services Offered</Link>
+        <span className='breadcrumb'>
+          <Link to='/'>Home</Link>
+          <p>/</p>
+          <Link to='/services'>Services Offered</Link>
+        </span>
         <br/>
         <p>
           Watching your paycheck handed out to creditors stinks! Owing money to others can make you feel like you can never get ahead. 

@@ -8,7 +8,11 @@ function MoneyMarriage() {
         <Image src="../images/headShot.jpg"></Image>
         <h2>Money And Marriage</h2>
         <br/>
-        <Link to='/services' className='breadcrumb'>Back to Services Offered</Link>
+        <span className='breadcrumb'>
+          <Link to='/'>Home</Link>
+          <p>/</p>
+          <Link to='/services'>Services Offered</Link>
+        </span>
         <br/>
         <p className='center'>
           Engaged? Newlyweds?  

@@ -274,12 +274,23 @@ a {
 .breadcrumb {
   background-color: unset;
   color: $brandSecondaryColor;
+  display: flex;
   font-size: smaller;
   font-style: italic;
+  margin-bottom: 0;
   padding: 0;
 
-  &:hover {
-    color: $brandPrimaryColor;
+  a {
+    display: inline-block;
+
+    &:hover {
+      color: $brandPrimaryColor;
+    }
+  }
+  p {
+    display: inline-block;
+    padding: 0 0.5em;
+    text-indent: 0;
   }
 }
 

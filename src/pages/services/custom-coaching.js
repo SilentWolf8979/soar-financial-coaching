@@ -8,7 +8,11 @@ function CustomCoaching() {
         <Image src="../images/headShot.jpg"></Image>
         <h2>Custom Coaching</h2>
         <br/>
-        <Link to='/services' className='breadcrumb'>Back to Services Offered</Link>
+        <span className='breadcrumb'>
+          <Link to='/'>Home</Link>
+          <p>/</p>
+          <Link to='/services'>Services Offered</Link>
+        </span>
         <br/>
         <p>
           Here at Soar Financial Coaching, it is understood that every client has unique challenges, strengths, personalities, and goals. 
