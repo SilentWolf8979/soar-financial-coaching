@@ -242,6 +242,12 @@ a {
     margin-bottom: 2em;
     max-width: 25em;
     width: 100%;
+
+    &.vertical {
+      height: 100%;
+      max-height: 15em;
+      width: auto;
+    }
   }
 
   li {
@@ -286,11 +292,22 @@ a {
     &:hover {
       color: $brandPrimaryColor;
     }
+
+    &.logo {
+      height: 2em;
+      position: relative;
+      top: -0.5em;
+    }
   }
+
   p {
     display: inline-block;
-    padding: 0 0.5em;
+    padding: 0 0.5em 0 0;
     text-indent: 0;
+  }
+
+  svg {
+    height: 2em;
   }
 }
 

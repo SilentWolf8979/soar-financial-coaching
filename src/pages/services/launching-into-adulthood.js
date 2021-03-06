@@ -1,18 +1,14 @@
 import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function LaunchingAdulthood() {
   return (
     <div className="App">
       <div className='pageContent'>
-        <Image src="../images/headShot.jpg"></Image>
+        <Image src="../images/ctaGradOnSidewalk.jpg" className='vertical'></Image>
         <h2>Launching Into Adulthood</h2>
         <br/>
-        <span className='breadcrumb'>
-          <Link to='/'>Home</Link>
-          <p>/</p>
-          <Link to='/services'>Services Offered</Link>
-        </span>
+        <Breadcrumbs/>
         <br/>
         <p>
           Launching Into Adulthood is coaching intended for high school and college students as well as young adults who opt for alternate pathways to the workforce. 

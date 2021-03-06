@@ -1,18 +1,14 @@
 import { Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function MoneyMarriage() {
   return (
     <div className="App">
       <div className='pageContent'>
-        <Image src="../images/headShot.jpg"></Image>
+        <Image src="../images/ctaCoupleHoldingHands.jpg"></Image>
         <h2>Money And Marriage</h2>
         <br/>
-        <span className='breadcrumb'>
-          <Link to='/'>Home</Link>
-          <p>/</p>
-          <Link to='/services'>Services Offered</Link>
-        </span>
+        <Breadcrumbs/>
         <br/>
         <p className='center'>
           Engaged? Newlyweds?  

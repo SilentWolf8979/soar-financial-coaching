@@ -1,18 +1,14 @@
 import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function DebtElimination() {
   return (
     <div className="App">
       <div className='pageContent'>
-        <Image src="../images/ctaHandcuffs.jpg"></Image>
+        <Image src="../images/ctaSunsetJumping.jpg"></Image>
         <h2>Debt Elimination</h2>
         <br/>
-        <span className='breadcrumb'>
-          <Link to='/'>Home</Link>
-          <p>/</p>
-          <Link to='/services'>Services Offered</Link>
-        </span>
+        <Breadcrumbs/>
         <br/>
         <p>
           Watching your paycheck handed out to creditors stinks! Owing money to others can make you feel like you can never get ahead. 

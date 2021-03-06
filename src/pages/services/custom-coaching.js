@@ -1,18 +1,14 @@
 import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function CustomCoaching() {
   return (
     <div className="App">
       <div className='pageContent'>
-        <Image src="../images/headShot.jpg"></Image>
+        <Image src="../images/ctaDandelion.jpg"></Image>
         <h2>Custom Coaching</h2>
         <br/>
-        <span className='breadcrumb'>
-          <Link to='/'>Home</Link>
-          <p>/</p>
-          <Link to='/services'>Services Offered</Link>
-        </span>
+        <Breadcrumbs/>
         <br/>
         <p>
           Here at Soar Financial Coaching, it is understood that every client has unique challenges, strengths, personalities, and goals. 

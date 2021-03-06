@@ -1,18 +1,14 @@
 import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function FinancialPeaceU() {
   return (
     <div className="App">
       <div className='pageContent'>
-        <Image src="../images/headShot.jpg"></Image>
+        <Image src="../images/ctaHandcuffs.jpg"></Image>
         <h2>Financial Peace University</h2>
         <br/>
-        <span className='breadcrumb'>
-          <Link to='/'>Home</Link>
-          <p>/</p>
-          <Link to='/services'>Services Offered</Link>
-        </span>
+        <Breadcrumbs/>
         <br/>
         <p className='center'>
           Are you looking for someone to teach Dave Ramsey’s <u>Financial Peace University</u> at your church or organization? 

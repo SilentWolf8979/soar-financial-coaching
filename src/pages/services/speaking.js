@@ -1,18 +1,14 @@
 import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function Speaking() {
   return (
     <div className="App">
       <div className='pageContent'>
-        <Image src="../images/headShot.jpg"></Image>
+        <Image src="../images/ctaPeopleAtTable.jpg"></Image>
         <h2>Speaking Engagements</h2>
         <br/>
-        <span className='breadcrumb'>
-          <Link to='/'>Home</Link>
-          <p>/</p>
-          <Link to='/services'>Services Offered</Link>
-        </span>
+        <Breadcrumbs/>
         <br/>
         <p>
           The first time I learned the basics of budgeting was at a MOPS (Mothers of Pre-Schoolers) meeting. 
