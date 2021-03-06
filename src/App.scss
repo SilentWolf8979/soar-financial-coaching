@@ -22,7 +22,7 @@ $brandSecondaryColorActive: $brandLightBlue;
 
 $brandPrimaryCtaColor: $brandOrange;
 $brandPrimaryCtaColorActive: $brandLightOrange;
-$brandSecondaryCtaColor: $brandLightBlue;
+$brandSecondaryCtaColor: $brandDarkBlue;
 $brandSecondaryCtaColorActive: $brandLightBlue;
 $brandLinkColor: $brandSecondaryColor;
 $brandLinkColorActive: $brandSecondaryColorActive;
@@ -165,6 +165,7 @@ a {
 .jumbotron {
   border-radius: 0;
   height: 25em;
+  padding: 1rem;
   position: relative; 
 
   &::before {
@@ -183,13 +184,13 @@ a {
   h1 {
     color: $brandDarkBlue;
     font-family: $brandSecondaryFontFamily;
-    font-size: 50px;
+    font-size: 3.5em;
     position: relative;
   }
 
   p {
     color: $brandDarkBlue;
-    font-size: larger;
+    font-size: x-large;
     font-weight: bold;
     position: relative;
   }
@@ -201,19 +202,83 @@ a {
 }
 
 .homeContent {
-  margin: 0 1em;
   position: relative;
   top: -5em;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .justify-content-center {
+    margin: 0 1em;
+  }
+
+  .fullWidth {
+    background-color: $brandPrimaryColor;
+    color: $brandWhite;
+    margin: 0;
+    padding: 2em 1em;
+  }
 }
 
 .pageContent {
-  margin: 1em 2em 0 2em;
+  margin-top: 1em;
   position: relative;
+
+  .margin {
+    margin: 0 2em;
+  }
+
+  .narrowMargin {
+    margin: 0 2em 2em 2em;
+  }
 
   p {
     padding-left: 1em;
     text-align: left;
     text-indent: -1em;
+
+    &.center {
+      padding-left: 0;
+      text-align: center;
+      text-indent: 0;
+    }
+  }
+
+  img {
+    height: auto;
+    margin-bottom: 2em;
+    max-width: 25em;
+    width: 100%;
+
+    &.vertical {
+      height: 100%;
+      max-height: 15em;
+      width: auto;
+    }
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    text-align: left;
+  }
+
+  .contact {
+    color: $brandSecondaryColor;
+
+    a {
+      color: $brandSecondaryColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      color: $brandSecondaryColor;
+      font-weight: bold;
+      margin-bottom: 1.75em;
+    }
   }
 
   .accordion {
@@ -221,15 +286,75 @@ a {
     text-align: left;
 
     .card-header {
-      background-color: $brandSecondaryCtaColor;
+      background-color: $brandSecondaryCtaColorActive;
       cursor: pointer;
       font-weight: bold;
     }
   }
 
+  .fontColor {
+    color: $brandSecondaryColor;
+  }
+
   .subtitle {
     font-size:x-large;
     text-decoration: underline;
+  }
+
+  .quote {
+    background-color: $brandOliveGreen;
+    color: $brandWhite;
+    margin-top: 2em;
+    padding: 2em 1em;
+
+    p {
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .quoteReference {
+      font-style: normal;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.breadcrumb {
+  background-color: unset;
+  color: $brandSecondaryColor;
+  display: flex;
+  font-size: smaller;
+  font-style: italic;
+  margin-bottom: 0;
+  padding: 0;
+
+  a {
+    color: $brandPrimaryColor;
+    display: inline-block;
+    font-weight: bold;
+    height: 100%;
+
+    &:hover {
+      color: $brandPrimaryColor;
+      text-decoration: underline;
+    }
+
+    &.logo {
+      height: 2em;
+      position: relative;
+      top: -0.5em;
+    }
+  }
+
+  p {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.5em 0 0;
+    text-indent: 0;
+  }
+
+  svg {
+    height: 2em;
   }
 }
 
@@ -244,6 +369,18 @@ a {
   }
 }
 
+.btnEmail {
+  background-color: $brandSecondaryCtaColor;
+  border-color: $brandSecondaryCtaColor;
+  color: $brandSecondaryFontColor;
+
+  &:hover {
+    background-color: $brandSecondaryCtaColorActive;
+    border-color: $brandSecondaryCtaColorActive;
+    color: $brandBlack;
+  }
+}
+
 .cta {
   background-color: $brandWhite;
   border: 2px solid $brandDarkBlue;
@@ -252,6 +389,7 @@ a {
   padding: 0.75em;
 
   p {
+    font-size: x-large;
     font-weight: bold;
     margin-bottom: 0;
   }
@@ -259,8 +397,17 @@ a {
 
 .ctaImage {
   img {
-    height: 100%;
+    height: auto;
+    margin-bottom: 1.5em;
     width: 100%;
+  }
+
+  &.hideSmall {
+    display: none;
+  }
+  
+  &.hideLarge {
+    display: block;
   }
 }
 
@@ -273,15 +420,31 @@ a {
   }
 
   .heading {
+    font-size: large;
     font-weight: bold;
     margin-bottom: 0;
+  }
+}
+
+.ctaService {
+  height: 100%;
+  margin: 1em 0;
+
+  .title {
+    font-size: x-large;
+    font-weight: bold;
   }
 }
 
 .ctaTextOnly {
   margin: 3em 0;
 
+  h4 {
+    font-weight: bold;
+  }
+
   p {
+    font-size: larger;
     margin-bottom: 0;
   }
 }
@@ -333,16 +496,43 @@ a {
 @media (min-width: 576px) { 
   .jumbotron {
     h1 {
-      margin-top: 1em;
+      font-size: 4em;
+    }
+
+    p {
+      font-size: xx-large;
     }
   }
 
   .homeContent {
-    margin: 0 3em;
+    .justify-content-center {
+      margin: 0 3em;
+    }
+
+    .fullWidth {
+      margin: 0;
+      padding: 3em;
+    }
   }
 
   .pageContent {
-    margin: 1em 5em 0 5em;
+    .margin {
+      margin: 1em 5em 2em 5em;
+    }
+
+    .quote {
+      padding: 2em 5em;
+    }
+  }
+
+  .pageContent {
+    .narrowMargin {
+      margin: 1em 2em 2em 2em;
+    }
+  }
+
+  .ctaService {
+    margin: 0.5em;
   }
  }
 
@@ -350,14 +540,29 @@ a {
 @media (min-width: 768px) { 
   .jumbotron {
     h1 {
-      margin-top: 2em;
+      margin-top: 1.75em;
     }
   }
 
   .homeContent {
-    margin: 0 5em;
+    .justify-content-center {
+      margin: 0 5em;
+    }
+
+    .fullWidth {
+      margin: 0;
+      padding: em;
+    }
   }
- }
+
+  .ctaImage.hideSmall {
+    display: block;
+  }
+
+  .ctaImage.hideLarge {
+    display: none;
+  }
+}
 
 // Large devices (desktops, 992px and up)
 //@media (min-width: 992px) { ... }
