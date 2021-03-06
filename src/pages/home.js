@@ -98,10 +98,6 @@ function Home() {
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         
         <Row className='justify-content-center fullWidth'>
           <Col xs={12} md={5} lg={4} className='ctaImage'>
@@ -111,13 +107,9 @@ function Home() {
             <p>Money problems are stressful.</p>
             <p>No one likes hiding from creditors.</p>
             <p>It's time to take a stand.</p>
-            <br/>
-            <Button href='/book'>Book Your Consultation</Button>
           </Col>
         </Row>
 
-        <br/>
-        <br/>
         <br/>
 
         <Row className='justify-content-center'>

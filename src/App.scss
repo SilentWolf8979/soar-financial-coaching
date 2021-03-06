@@ -222,8 +222,16 @@ a {
 }
 
 .pageContent {
-  margin: 1em 2em 2em 2em;
+  margin-top: 1em;
   position: relative;
+
+  .margin {
+    margin: 0 2em;
+  }
+
+  .narrowMargin {
+    margin: 0 2em 2em 2em;
+  }
 
   p {
     padding-left: 1em;
@@ -266,14 +274,30 @@ a {
     }
   }
 
+  .fontColor {
+    color: $brandSecondaryColor;
+  }
+
   .subtitle {
     font-size:x-large;
     text-decoration: underline;
   }
 
   .quote {
-    font-style: italic;
-    margin-bottom: 0;
+    background-color: $brandOliveGreen;
+    color: $brandWhite;
+    margin-top: 2em;
+    padding: 2em 1em;
+
+    p {
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .quoteReference {
+      font-style: normal;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -287,7 +311,10 @@ a {
   padding: 0;
 
   a {
+    color: $brandPrimaryColor;
     display: inline-block;
+    font-weight: bold;
+    height: 100%;
 
     &:hover {
       color: $brandPrimaryColor;
@@ -302,6 +329,7 @@ a {
 
   p {
     display: inline-block;
+    font-weight: bold;
     padding: 0 0.5em 0 0;
     text-indent: 0;
   }
@@ -373,6 +401,7 @@ a {
   }
 
   .heading {
+    font-size: large;
     font-weight: bold;
     margin-bottom: 0;
   }
@@ -383,6 +412,7 @@ a {
   margin: 1em 0;
 
   .title {
+    font-size: x-large;
     font-weight: bold;
   }
 }
@@ -467,11 +497,19 @@ a {
   }
 
   .pageContent {
-    margin: 1em 5em 2em 5em;
+    .margin {
+      margin: 1em 5em 2em 5em;
+    }
+
+    .quote {
+      padding: 2em 5em;
+    }
   }
 
-  .pageContent.narrowMargin {
-    margin: 1em 2em 2em 2em;
+  .pageContent {
+    .narrowMargin {
+      margin: 1em 2em 2em 2em;
+    }
   }
 
   .ctaService {
