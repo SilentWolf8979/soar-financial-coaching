@@ -263,6 +263,24 @@ a {
     text-align: left;
   }
 
+  .contact {
+    color: $brandSecondaryColor;
+
+    a {
+      color: $brandSecondaryColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      color: $brandSecondaryColor;
+      font-weight: bold;
+      margin-bottom: 1.75em;
+    }
+  }
+
   .accordion {
     margin-bottom: 2em;
     text-align: left;
@@ -318,6 +336,7 @@ a {
 
     &:hover {
       color: $brandPrimaryColor;
+      text-decoration: underline;
     }
 
     &.logo {
