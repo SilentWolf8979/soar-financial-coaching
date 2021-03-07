@@ -17,6 +17,7 @@ function Contact() {
           <br/>
           <br/>
           <br/>
+          <br/>
           <div className='quote'>
             <br/>
             <br/>
