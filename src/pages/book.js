@@ -5,9 +5,13 @@ function Book() {
           <div className='margin'>
             <h2>Book your consultation</h2>
             <br/>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            {/* Calendly inline widget begin */}
+            <div 
+              className="calendly-inline-widget bookEmbed" 
+              data-url="https://calendly.com/soarfinancialcoaching/complimentary-consultation-30-min?background_color=cedbb0&text_color=092a48&primary_color=df5a01"
+            >
+            </div>
+            {/* Calendly inline widget end */}
           </div>
         </div>
       </div>

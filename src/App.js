@@ -24,6 +24,27 @@ import MoneyMarriage from './pages/services/money-and-marriage.js'
 import Speaking from './pages/services/speaking.js'
 
 function App() {
+  window.addEventListener(
+    'message',
+    function(e) {
+      if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+        window.scrollTo(0, 0);
+      }
+    }
+  );
+  window.addEventListener(
+    'click',
+    function(e) {
+      if (document.getElementById('navbarToggler').className.indexOf('collapsed') < 0) {
+        if (e.path && e.path[0] && (e.path[0].className !== 'nav-link active')) {
+          if (!e.path.includes(document.getElementById('navbarToggler'))) {
+            document.getElementById('navbarToggler').click();
+          }
+        }
+      }
+    }
+  );
+  
   return (
     <Router>
       <ScrollToTop>

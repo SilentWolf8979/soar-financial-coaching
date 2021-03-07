@@ -12,7 +12,7 @@ function CustomCoaching() {
           <Breadcrumbs/>
           <br/>
           <p>
-            Here at Soar Financial Coaching, it is understood that every client has unique challenges, strengths, personalities, and goals. 
+            Here at Soar Financial Coaching it is understood that every client has unique challenges, strengths, personalities, and goals. 
             The process of customized coaching is to help you define your dreams, assess where you are in the journey, 
             and make a plan that you can follow to get closer to whatever it is you envision for your future.
           </p>
