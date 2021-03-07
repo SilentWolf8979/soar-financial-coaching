@@ -5,10 +5,15 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#cedbb0" />
-    <meta
-      name="description"
-      content="Soar Financial Coaching"
-    />
+    <meta name="description" content="Soar Financial Coaching" />
+
+    <meta http-equiv="cache-control" content="public max-age=2592000" />
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://dc.services.visualstudio.com https://firebase.googleapis.com; frame-src https://calendly.com; default-src 'self' https://*.google.com; font-src https://fonts.googleapis.com/ https://fonts.gstatic.com/; img-src 'self' data: https://*.google.com https://*.googleapis.com https://*.googleusercontent.com https://*.gstatic.com https://www.google-analytics.com https://stats.g.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://*.google.com https://*.msecnd.net https://assets.calendly.com ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.google.com" />
+    <meta http-equiv="Feature-Policy" content="geolocation *" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -41,27 +46,27 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyCp1ohi0fRZIwHs0WLjD-C0FcmgQCpPftA",
-    authDomain: "soar-financial-coaching.firebaseapp.com",
-    projectId: "soar-financial-coaching",
-    storageBucket: "soar-financial-coaching.appspot.com",
-    messagingSenderId: "542103272059",
-    appId: "1:542103272059:web:e01266fb36592cd4cf80de",
-    measurementId: "G-VDD87ZPDNL"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCp1ohi0fRZIwHs0WLjD-C0FcmgQCpPftA",
+        authDomain: "soar-financial-coaching.firebaseapp.com",
+        projectId: "soar-financial-coaching",
+        storageBucket: "soar-financial-coaching.appspot.com",
+        messagingSenderId: "542103272059",
+        appId: "1:542103272059:web:e01266fb36592cd4cf80de",
+        measurementId: "G-VDD87ZPDNL"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
