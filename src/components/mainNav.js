@@ -14,7 +14,7 @@ function MainNav() {
         <Navbar.Toggle aria-controls='main-navbar-nav' id='navbarToggler'>
           <FontAwesomeIcon icon={faBars} />
         </Navbar.Toggle>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" aria-label='Soar Financial Coaching'>
           <Logo
             alt="Soar Financial Coaching"
             className="d-inline-block align-top App-logo"

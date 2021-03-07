@@ -203,7 +203,11 @@ a {
 
 .homeContent {
   position: relative;
-  top: -4em;
+  top: -5em;
+
+  h2 {
+    font-size: 2rem;
+  }
 
   h3 {
     font-size: 2rem;
@@ -458,15 +462,20 @@ a {
 }
 
 .ctaTextOnly {
-  margin: 3em 0;
+  padding: 0;
 
   h4 {
     font-weight: bold;
+    margin: 3em 0;
   }
 
   p {
-    font-size: larger;
+    font-size: large;
     margin-bottom: 0;
+
+    &.fontLarger {
+      font-size: larger;
+    }
   }
 }
 
@@ -555,7 +564,13 @@ a {
   .ctaService {
     margin: 0.5em;
   }
- }
+
+  .ctaTextOnly {
+    p {
+      font-size: x-large;
+    }
+  }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 

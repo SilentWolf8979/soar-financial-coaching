@@ -36,21 +36,21 @@ function Home() {
 
         <Row className='justify-content-center'>
           <Col xs={12} className='ctaTextOnly'>
-            <h3>Coaching = Empowerment</h3>
+            <h2>Coaching = Empowerment</h2>
             <br/>
-            <p>
+            <p className='fontLarger'>
               If all you needed to be successful was information, a simple search of the internet will get you tens of thousands of resources and opinions. 
               Talk about overwhelming!
             </p>
-            <p>
+            <p className='fontLarger'>
               But financial specialists know that to be successful with money, you need both the know-how and healthy money habits.
             </p>
-            <p>
+            <p className='fontLarger'>
               Take advantage of the coaching we offer to give yourself the boost you need to grow in understanding, improve communication with your spouse, 
               give voice to your dreams, and create a plan to make them all a reality!
             </p>
             <br/>
-            <p>
+            <p className='fontLarger'>
               It’s time to discover your best self!
             </p>
           </Col>
@@ -64,7 +64,7 @@ function Home() {
         <br/>
         <Row className='justify-content-center'>
           <Col xs={10} sm={4} className='ctaSteps'>
-            <Image src="../images/art/sketchNumeral1.svg"></Image>
+            <Image src="../images/art/sketchNumeral1.svg" alt="Step 1"></Image>
             <br/>
             <p className='heading'>Discover</p>
             <br/>
@@ -75,7 +75,7 @@ function Home() {
             </p>
           </Col>
           <Col xs={10} sm={4} className='ctaSteps'>
-            <Image src="../images/art/sketchNumeral2.svg"></Image>
+            <Image src="../images/art/sketchNumeral2.svg" alt="Step 2"></Image>
             <br/>
             <p className='heading'>Dive In</p>
             <br/>
@@ -86,7 +86,7 @@ function Home() {
             </p>
           </Col>
           <Col xs={10} sm={4} className='ctaSteps'>
-            <Image src="../images/art/sketchNumeral3.svg"></Image>
+            <Image src="../images/art/sketchNumeral3.svg" alt="Step 3"></Image>
             <br/>
             <p className='heading'>Dream and Do</p>
             <br/>
@@ -108,12 +108,14 @@ function Home() {
         
         <Row className='justify-content-center fullWidth'>
           <Col xs={12} md={5} lg={4} className='ctaImage'>
-            <Image src="../images/ctaMaleWithHeadache.jpg"></Image>
+            <Image src="../images/ctaMaleWithHeadache.jpg" alt="Man With Headache"></Image>
           </Col>
-          <Col xs={12} md={6} lg={7} className='ctaTextOnly'>
-            <p>Money problems are stressful.</p>
-            <p>No one likes hiding from creditors.</p>
-            <p>It's time to take a stand.</p>
+          <Col xs={12} md={7} lg={7} className='ctaTextOnly d-flex align-items-center'>
+            <div className='mx-auto'>
+              <p>Money problems are stressful.</p>
+              <p>No one likes hiding from creditors.</p>
+              <p>It's time to take a stand.</p>
+            </div>
           </Col>
         </Row>
 
@@ -122,9 +124,9 @@ function Home() {
         <Row className='justify-content-center'>
           <Col xs={12} className='ctaTextOnly'>
             <h4>
-              Coaches understand that being the best you can be requires preparation, a strong defense, 
-              and an equally strong offense.<br/>
-              Finance is no different.  
+              Coaches understand that being the best you can be requires preparation, <br/>
+              a strong defense, and an equally strong offense.<br/>
+              <i><b>Finance is no different.</b></i>
             </h4>
           </Col>
         </Row>
@@ -147,20 +149,22 @@ function Home() {
                 </p>
               </Col>
             </Row>
+            <Row>
+              <Col>
+                <p>
+                  <b>Offense:</b> Scoring the goal is the most exciting time of the game! Once you are working your plan and your debt is gone, 
+                  it is time to save and invest and let compound interest work in your favor. Enjoy this stage of wealth building and ridiculously generous giving!
+                </p>
+              </Col>
+            </Row>
           </Col>
           <Col md={5} className='ctaImage hideSmall'>
-            <Image src="../images/ctaBlueFootball.jpg"></Image>
+            <Image src="../images/ctaBlueFootball.jpg" alt="Football Image"></Image>
           </Col>
         </Row>
         <Row className='justify-content-center text-left'>
-          <Col xs={12}>
-            <p>
-              <b>Offense:</b> Scoring the goal is the most exciting time of the game! Once you are working your plan and your debt is gone, 
-              it is time to save and invest and let compound interest work in your favor. Enjoy this stage of wealth building and ridiculously generous giving!
-            </p>
-          </Col>
           <Col xs={12} className='ctaImage hideLarge'>
-            <Image src="../images/ctaBlueFootball.jpg"></Image>
+            <Image src="../images/ctaBlueFootball.jpg" alt="Football Image"></Image>
           </Col>
         </Row>
 

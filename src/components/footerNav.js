@@ -7,7 +7,7 @@ function FooterNav() {
     <div className='footerNav'>
       <Row>
         <Col xs={3} sm={2} lg={1}>
-          <a href='/' className='logoLink'>
+          <a href='/' className='logoLink' aria-label='Soar Financial Coaching'>
             <Logo
               alt="Soar Financial Coaching"
               className="d-inline-block align-top App-logo"
