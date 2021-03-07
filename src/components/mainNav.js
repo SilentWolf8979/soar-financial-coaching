@@ -11,7 +11,7 @@ function MainNav() {
         <p>Reflect.&nbsp;&nbsp;&nbsp;Learn.&nbsp;&nbsp;&nbsp;Grow.&nbsp;&nbsp;&nbsp;Soar.</p>
       </div>
       <div className='navbarFull'>
-        <Navbar.Toggle aria-controls='main-navbar-nav'>
+        <Navbar.Toggle aria-controls='main-navbar-nav' id='navbarToggler'>
           <FontAwesomeIcon icon={faBars} />
         </Navbar.Toggle>
         <Navbar.Brand href="/">

@@ -32,6 +32,18 @@ function App() {
       }
     }
   );
+  window.addEventListener(
+    'click',
+    function(e) {
+      if (document.getElementById('navbarToggler').className.indexOf('collapsed') < 0) {
+        if (e.path && e.path[0] && (e.path[0].className !== 'nav-link active')) {
+          if (!e.path.includes(document.getElementById('navbarToggler'))) {
+            document.getElementById('navbarToggler').click();
+          }
+        }
+      }
+    }
+  );
   
   return (
     <Router>

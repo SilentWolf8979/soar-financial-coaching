@@ -17,20 +17,20 @@ function FooterNav() {
         </Col>
         <Col xs={8} sm={10}>
           <Row>
-            <Col xs={6} sm={4} md={2} className='text-center'>
+            <Col xs={3} sm={4} md={2} className='text-center'>
               <Nav.Link href='/contact'>Contact</Nav.Link>
             </Col>
-            <Col xs={6} sm={4} md={2} className='text-center'>
+            <Col xs={4} sm={4} md={2} className='text-center'>
               <Nav.Link href='/about'>About</Nav.Link>
             </Col>
-            <Col xs={6} sm={4} md={2} className='text-center'>
+            <Col xs={3} sm={4} md={2} className='text-center'>
               <Nav.Link href='/content'>Content</Nav.Link>
             </Col>
-            <Col xs={6} sm={4} md={4} className='text-center'>
-              <Nav.Link href='/whatIs'>What Is A Financial Coach?</Nav.Link>
+            <Col xs={3} sm={4} md={2} className='text-center'>
+              <Nav.Link href='/legal'>Legal</Nav.Link>
             </Col>
-            <Col xs={6} sm={4} md={2} className='text-center'>
-            <Nav.Link href='/legal'>Legal</Nav.Link>
+            <Col xs={8} sm={4} md={4} className='text-center'>
+              <Nav.Link href='/whatIs'>What Is A Financial Coach?</Nav.Link>
             </Col>
           </Row>
         </Col>
