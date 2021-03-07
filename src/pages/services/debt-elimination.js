@@ -27,7 +27,7 @@ function DebtElimination() {
             <li>Learn the tools you need to effectively deal with creditors.</li>
             <li>Discover why past attempts to pay down your debt have failed so you can learn from that knowledge and move forward confidently.</li>
             <li>Create a clear plan to pay off your debt - big or small - that is simple and manageable. This process does not mean you can no longer enjoy life! True, purpose-filled intentionality is freeing, not constraining.</li>
-            <li>Find the encouragement and hope you need to work your plan until you achieve “debt-free” status. Next up, freedom!</li>
+            <li>Find the encouragement and hope you need to work your plan until you achieve <i>debt-free</i> status. Next up, freedom!</li>
           </ul>
           <br/>
           <Button href='/book'>Book Your Consultation</Button>

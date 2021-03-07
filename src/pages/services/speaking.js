@@ -20,7 +20,7 @@ function Speaking() {
           </p>
           <p>
             With no further direction, it took many more years before my husband and I really got going. 
-            Unfortunately, we made a lot of poor financial decisions in the meantime, but I still look back gratefully on that initial introduction to a lifestyle that prioritizes financial responsibility and stability. 
+            Unfortunately we made a lot of poor financial decisions in the meantime, but I still look back gratefully on that initial introduction to a lifestyle that prioritizes financial responsibility and stability. 
             That MOPS speaker lit a light within me that grew over the years until my husband and I finally looked at one another and said, “Enough. We must make a change.”
           </p>
           <p>

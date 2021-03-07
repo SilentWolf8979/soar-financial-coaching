@@ -203,7 +203,7 @@ a {
 
 .homeContent {
   position: relative;
-  top: -5em;
+  top: -4em;
 
   h3 {
     font-size: 2rem;
@@ -442,9 +442,19 @@ a {
   margin: 1em 0;
 
   .title {
+    display: inline-block;
     font-size: x-large;
     font-weight: bold;
+    width: 100%;
   }
+
+  .fullLink {
+    width: 100%;
+  }
+}
+
+.ctaServiceLarge {
+  height: 130px;
 }
 
 .ctaTextOnly {

@@ -1,4 +1,5 @@
 import { Button, Col, Image, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -12,14 +13,20 @@ function Home() {
 
       <div className='homeContent'>
         <Row className='justify-content-center'>
-          <Col xs={10} sm={3} className='cta'>
-            <p>Freedom<br/>to<br/>Dream</p>
+          <Col xs={10} sm={3} className='cta ctaService ctaServiceLarge align-items-center'>
+            <div className='mx-auto fullLink'>
+              <Link to='/services' className='title'>Freedom<br/>to<br/>Dream</Link>
+            </div>
           </Col>
-          <Col xs={10} sm={3} className='cta'>
-            <p>Freedom<br/>to<br/>Save</p>
+          <Col xs={10} sm={3} className='cta ctaService ctaServiceLarge align-items-center'>
+            <div className='mx-auto fullLink'>
+              <Link to='/services' className='title'>Freedom<br/>to<br/>Save</Link>
+            </div>
           </Col>
-          <Col xs={10} sm={3} className='cta'>
-            <p>Freedom<br/>to<br/>Give</p>
+          <Col xs={10} sm={3} className='cta ctaService ctaServiceLarge align-items-center'>
+            <div className='mx-auto fullLink'>
+              <Link to='/services' className='title'>Freedom<br/>to<br/>Give</Link>
+            </div>
           </Col>
         </Row>
         
