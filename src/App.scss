@@ -317,6 +317,16 @@ a {
       margin-bottom: 0;
     }
   }
+
+  .bookEmbed {
+    height: 1300px;
+    min-width: 250px;
+    overflow-y: hidden !important;
+
+    [class*="layout-FooterContainer"] {
+      display: none !important;
+    }
+  }
 }
 
 .breadcrumb {
