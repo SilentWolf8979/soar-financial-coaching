@@ -104,7 +104,6 @@ function Home() {
         <br/>
         <br/>
         <br/>
-        <br/>
         
         <Row className='justify-content-center fullWidth'>
           <Col xs={12} md={5} lg={4} className='ctaImage'>

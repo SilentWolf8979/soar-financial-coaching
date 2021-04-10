@@ -229,6 +229,10 @@ a {
   margin-top: 1em;
   position: relative;
 
+  &.noTop {
+    margin-top: 0;
+  }
+
   .margin {
     margin: 0 2em;
   }
@@ -320,6 +324,10 @@ a {
       font-style: normal;
       margin-bottom: 0;
     }
+
+    .empty {
+      flex-grow: 1;
+    }
   }
 
   .bookEmbed {
@@ -329,6 +337,36 @@ a {
 
     [class*="FooterContainer"] {
       display: none !important;
+    }
+  }
+
+  .contentPost {
+    margin-bottom: 5em;
+
+    .title {
+      background-color: $brandOliveGreen;
+      color: $brandWhite;
+      font-size: x-large;
+      height: 4em;
+      width: 100%;
+
+      .wrapper {
+        width: 100%;
+      }
+    }
+
+    .subTitle {
+      background-color: $brandDarkBlue;
+      color: $brandWhite;
+      margin-bottom: 1em;
+
+      span {
+        margin-left: 1em;
+      }
+    }
+
+    .content {
+      margin: 0 1em;
     }
   }
 }
@@ -601,7 +639,21 @@ a {
 }
 
 // Large devices (desktops, 992px and up)
-//@media (min-width: 992px) { ... }
+@media (min-width: 992px) { 
+  .pageContent {
+    .contentPost {
+      .subTitle {
+        span {
+          margin-left: 3em;
+        }
+      }
+
+      .content {
+        margin: 0 3em;
+      }
+    }
+  }
+}
 
 // Extra large devices (large desktops, 1200px and up)
 //@media (min-width: 1200px) { ... }
