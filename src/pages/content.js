@@ -6,14 +6,19 @@ import Error404 from '../error404.js'
 
 class Content extends React.Component {
 
-//function Content() {
   state = {
     posts: []
   }
   
+  // Test Account
+  //client = contentful.createClient({
+  //  space: '65qhu3hd5kiq',
+  //  accessToken: '5o2CEEXjOouoqj1Uu1ISJSgrzc4lpontP5CWF7QAPD0'
+  //})
+
   client = contentful.createClient({
-    space: '65qhu3hd5kiq',
-    accessToken: '5o2CEEXjOouoqj1Uu1ISJSgrzc4lpontP5CWF7QAPD0'
+    space: '0ro9oshanqc6',
+    accessToken: 'qb14TskWdHhM5Cpl47EblMQFP8JHusdjARpU-WvLLmA'
   })
 
   currentPost = this.props;
@@ -38,7 +43,7 @@ class Content extends React.Component {
       return this.client.getEntries(
       {
         content_type: 'blogPost',
-        'fields.path':this.currentPost.location.pathname.replace('/content', '')
+        'fields.url':this.currentPost.location.pathname.replace('/content', '')
       });
     }
   }

@@ -20,18 +20,18 @@ const options = {
 };
 
 function ContentItem({data}) {
-  const date = new Date(data.sys.updatedAt);
+  const updatedAtDate = new Date(data.sys.updatedAt);
   return (
     <div className='contentPost'>
       <div className='justify-content-center'>
         <div className='title align-items-center d-flex'>
           <div className='wrapper'>
-            <span><Link className='contentLink' to={{pathname: `/content${data.fields.path}`, state: { data }}}>{data.fields.title}</Link></span>
+            <span><Link className='contentLink' to={{pathname: `/content${data.fields.url}`, state: { data }}}>{data.fields.title}</Link></span>
           </div>
         </div>
       </div>
       <div className='subTitle text-left'>
-        <span>{date.toLocaleString('default', { month: 'long' }) + ' ' + date.getDate() + ', ' + date.getFullYear()}</span>
+        <span>{updatedAtDate.toLocaleString('default', { month: 'long' }) + ' ' + updatedAtDate.getDate() + ', ' + updatedAtDate.getFullYear()}</span>
       </div>
       <div className='content'>
         { documentToReactComponents(data.fields.entry, options) }
@@ -41,4 +41,6 @@ function ContentItem({data}) {
 }
 
 export default ContentItem
-//        <iframe src={ data.fields.photos[1].fields.file.url} alt={ data.fields.photos[1].fields.title}/>
+
+// Embed a PDF in to the content post
+// <iframe src={ data.fields.assets[1].fields.file.url} alt={ data.fields.assets[1].fields.title}/>

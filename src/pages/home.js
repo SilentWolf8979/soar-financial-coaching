@@ -36,6 +36,25 @@ function Home() {
 
         <Row className='justify-content-center'>
           <Col xs={12} className='ctaTextOnly'>
+            <blockquote className='testimonial'>
+              <p>
+                Working with Anne for financial counseling has been a fantastic experience. First off, she is an amazing person on her own. 
+                Add in her knowledge and passion for personal finances and she is the person you want on your team! 
+                She takes a well rounded approach to finances that isn’t just numbers but considers your dreams, needs, and goals as well. 
+                Anne is friendly, genuine, and never judgemental. She comes prepared to each meeting with lots of ideas and tools. 
+                I could not recommend her enough and am thankful we made the decision to work with her!
+              </p>
+              <footer className="blockquote-footer">Abbey & Eric</footer>
+            </blockquote>
+          </Col>
+        </Row>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <Row className='justify-content-center'>
+          <Col xs={12} className='ctaTextOnly'>
             <h2>Coaching = Empowerment</h2>
             <br/>
             <p className='fontLarger'>
