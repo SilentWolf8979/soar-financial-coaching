@@ -22,6 +22,7 @@ class Content extends React.Component {
   })
 
   currentPost = this.props;
+  contentRoot = false;
   
   componentDidMount() {
     if (!this.currentPost.data) {
@@ -37,6 +38,7 @@ class Content extends React.Component {
   
   fetchPosts = () => {
     if (this.currentPost.location.pathname.endsWith('/content')) {
+      this.contentRoot = true;
       return this.client.getEntries();
     }
     else {
@@ -69,9 +71,9 @@ class Content extends React.Component {
 
     return (
       <div className="App">
-        <div className='pageContent'>
-          <h2>Content</h2>
-          <br/>
+        <div className={ `pageContent ${ !this.contentRoot ? "noTop" : null }`}>
+          { this.contentRoot ? <><h2>Content</h2><br/></> : null }
+          
           { this.state.posts.map(({fields}, i) =>
             <ContentItem key={i} data={this.state.posts[i]} />
           )}
