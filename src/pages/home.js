@@ -45,6 +45,7 @@ function Home() {
                 I could not recommend her enough and am thankful we made the decision to work with her!
               </p>
               <footer className="blockquote-footer">Abbey & Eric</footer>
+              <div className='pointer'></div>
             </blockquote>
           </Col>
         </Row>

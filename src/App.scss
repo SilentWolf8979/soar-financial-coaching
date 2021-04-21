@@ -518,9 +518,28 @@ a {
 }
 
 .testimonial {
+  background-color: $brandPrimaryColorActive;
+  border: 1px solid $brandPrimaryColorActive;
+  border-radius: 2em;
   max-width: 25em;
   margin: 0 auto;
-  padding: 0 3em;
+  padding: 2em 3em 0 3em;
+
+  .blockquote-footer {
+    margin-top: 1em;
+  }
+
+  .pointer {
+    background-color: $brandPrimaryColorActive;
+    border-radius: 0 0 0.25em 0;
+    bottom: -18px;
+    height: 35px;
+    left: calc(0.5vw - 75px);
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(45deg);
+    width: 35px;
+  }
 
   p {
     font-size: medium !important;
@@ -630,6 +649,10 @@ a {
 
   .testimonial {
     max-width: 35em;
+
+    .pointer {
+      left: calc(0.5vw - 150px);
+    }
   }
 }
 
@@ -679,6 +702,10 @@ a {
 
   .testimonial {
     max-width: 50em;
+
+    .pointer {
+      left: calc(0.5vw - 250px);
+    }
   }
 }
 
