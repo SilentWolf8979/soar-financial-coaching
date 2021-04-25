@@ -368,6 +368,11 @@ a {
     .content {
       margin: 0 1em;
     }
+
+    .embeddedAsset {
+      height: auto !important;
+      width: auto !important;
+    }
   }
 }
 
@@ -629,11 +634,16 @@ a {
     .quote {
       padding: 2em 5em;
     }
-  }
 
-  .pageContent {
     .narrowMargin {
       margin: 1em 2em 2em 2em;
+    }
+
+    .embeddedAsset {
+      &.bookCover {
+        float: left;
+        margin-right: 1.5em;
+      }
     }
   }
 

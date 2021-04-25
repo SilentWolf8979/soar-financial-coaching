@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-//import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const options = {
@@ -14,9 +14,26 @@ const options = {
     [MARKS.ITALIC]: text => <i>{text}</i>,
     [MARKS.UNDERLINE]: text => <u>{text}</u>,
   },*/
-  /*renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-  },*/
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+      var assetTagStyles = '';
+
+      for(var i = 0; i < node.data.target.metadata.tags.length; i++) {
+        if (node.data.target.metadata.tags[i].sys.id === 'bookCover') {
+          assetTagStyles += 'bookCover';
+        }
+      }
+
+      return (
+        <img className={`embeddedAsset ${assetTagStyles}`}
+          src={`${node.data.target.fields.file.url}`}
+          height={node.data.target.fields.file.details.image.height}
+          width={node.data.target.fields.file.details.image.width}
+          alt={node.data.target.fields.description}
+        />
+      );
+    },
+  },
 };
 
 function ContentItem({data}) {
