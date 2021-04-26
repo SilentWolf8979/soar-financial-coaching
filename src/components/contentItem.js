@@ -43,7 +43,6 @@ const options = {
 };
 
 function ContentItem({data}) {
-  console.log(data);
   const updatedAtDate = new Date(data.sys.updatedAt);
   return (
     <div className='contentPost'>
