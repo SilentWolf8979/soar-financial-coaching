@@ -16,6 +16,7 @@ class Content extends React.Component {
   //  accessToken: '5o2CEEXjOouoqj1Uu1ISJSgrzc4lpontP5CWF7QAPD0'
   //})
 
+  // Production Account
   client = contentful.createClient({
     space: '0ro9oshanqc6',
     accessToken: 'qb14TskWdHhM5Cpl47EblMQFP8JHusdjARpU-WvLLmA'

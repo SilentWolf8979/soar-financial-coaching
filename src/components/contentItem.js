@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BLOCKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-const options = {
-  renderText: text => {
-    return text.split('\n').reduce((children, textSegment, index) => {
-      return [...children, index > 0 && <br key={index} />, textSegment];
-    }, []);
-  },
-  /*renderMark: {
-    [MARKS.BOLD]: text => <b>{text}</b>,
-    [MARKS.ITALIC]: text => <i>{text}</i>,
-    [MARKS.UNDERLINE]: text => <u>{text}</u>,
-  },*/
+const options = {  
+  //renderMark: {
+    // [MARKS.BOLD]: text => <b>{text}</b>,
+    // [MARKS.ITALIC]: text => <i>{text}</i>,
+    // [MARKS.UNDERLINE]: text => <u>{text}</u>,
+    // [MARKS.CODE]: text => {
+    //   return text;
+    // },
+  //},
+
   renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => node.content.some(childNode => childNode.nodeType === `text` && childNode.marks.some(mark => mark.type === MARKS.CODE)) ? children : <p className='contentParagraph'>{children}</p>,
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
       var assetTagStyles = '';
 
@@ -34,9 +34,16 @@ const options = {
       );
     },
   },
+
+  renderText: text => {
+    return text.split('\n').reduce((children, textSegment, index) => {
+      return [...children, index > 0 && <br key={index} />, textSegment];
+    }, []);
+  },
 };
 
 function ContentItem({data}) {
+  console.log(data);
   const updatedAtDate = new Date(data.sys.updatedAt);
   return (
     <div className='contentPost'>

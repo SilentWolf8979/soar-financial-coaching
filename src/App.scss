@@ -371,6 +371,7 @@ a {
 
     .embeddedAsset {
       height: auto !important;
+      margin-bottom: 1em;
       width: auto !important;
     }
   }
@@ -643,6 +644,10 @@ a {
       &.bookCover {
         float: left;
         margin-right: 1.5em;
+
+        & + .contentParagraph {
+          min-height: 200px;
+        }
       }
     }
   }
