@@ -6,6 +6,11 @@ import Error404 from '../error404.js'
 
 class Content extends React.Component {
 
+  skip = 0;
+  limit = 2;
+  currentPage = 0;
+  totalPosts = 0;
+
   state = {
     posts: []
   }
@@ -38,21 +43,36 @@ class Content extends React.Component {
   }
   
   fetchPosts = () => {
-    if (this.currentPost.location.pathname.endsWith('/content')) {
+    var regex = new RegExp('(\\/content)((?!\\/+\\w)|(\\/\\d$))');
+
+    var result = regex.exec(this.currentPost.location.pathname)
+
+    //if (this.currentPost.location.pathname.endsWith('/content')) {
+    if (result) {
+      if (result[2].substring(1)) {
+        this.currentPage = parseInt(result[2].substring(1));
+        this.skip = this.limit * this.currentPage;
+      }
+
       this.contentRoot = true;
-      return this.client.getEntries();
+      return this.client.getEntries(
+      {
+        'skip': this.skip,
+        'limit': this.limit
+      });
     }
     else {
       return this.client.getEntries(
       {
         content_type: 'blogPost',
-        'fields.url':this.currentPost.location.pathname.replace('/content', '')
+        'fields.url': this.currentPost.location.pathname.replace('/content', '')
       });
     }
   }
 
   setPosts = response => {
     if (response.total > 0) {
+      this.totalPosts = response.total;
       this.setState({
         posts: response.items,
         hasContent: true,
@@ -78,6 +98,9 @@ class Content extends React.Component {
           { this.state.posts.map(({fields}, i) =>
             <ContentItem key={i} data={this.state.posts[i]} />
           )}
+
+          { this.skip > 0 ? <><a href={this.currentPage - 1 > 0 ? `/content/${this.currentPage - 1}` : '/content' }>Newer Posts</a></> : null }
+          { this.skip === 0 && this.limit < this.totalPosts ? <><a href={`/content/${this.currentPage + 1}`}>Older Posts</a></> : null }
         </div>
       </div>
     );
