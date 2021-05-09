@@ -439,6 +439,20 @@ a {
   }
 }
 
+.btnContent {
+  background-color: $brandSecondaryCtaColor;
+  border-color: $brandSecondaryCtaColor;
+  border-radius: 4px;
+  color: $brandPrimaryColor;
+  margin: 0 1em 3em 1em;
+  margin-left: 1em;
+  padding: 0.5em 1em;
+
+  &:hover {
+    color: $brandPrimaryColorActive;
+  }
+}
+
 .cta {
   background-color: $brandWhite;
   border: 2px solid $brandDarkBlue;
@@ -721,6 +735,10 @@ a {
     .pointer {
       left: calc(0.5vw - 250px);
     }
+  }
+
+  .btnContent {
+    margin: 0em 3em 3em 3em;
   }
 }
 

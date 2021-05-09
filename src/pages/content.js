@@ -7,7 +7,7 @@ import Error404 from '../error404.js'
 class Content extends React.Component {
 
   skip = 0;
-  limit = 2;
+  limit = 3;
   currentPage = 0;
   totalPosts = 0;
 
@@ -89,7 +89,10 @@ class Content extends React.Component {
   render() {
     if (!this.state.hasContent) return null;
     if (this.state.isError) return <Error404/>;
-
+    console.log("skip: " + this.skip);
+    console.log("cp: " + this.currentPage);
+    console.log("limit: " + this.limit);
+    console.log("tp: " + this.totalPosts);
     return (
       <div className="App">
         <div className={ `pageContent ${ !this.contentRoot ? "noTop" : null }`}>
@@ -99,8 +102,8 @@ class Content extends React.Component {
             <ContentItem key={i} data={this.state.posts[i]} />
           )}
 
-          { this.skip > 0 ? <><a href={this.currentPage - 1 > 0 ? `/content/${this.currentPage - 1}` : '/content' }>Newer Posts</a></> : null }
-          { this.skip === 0 && this.limit < this.totalPosts ? <><a href={`/content/${this.currentPage + 1}`}>Older Posts</a></> : null }
+          { this.skip > 0 ? <><a href={this.currentPage - 1 > 0 ? `/content/${this.currentPage - 1}` : '/content' } className='btnContent float-right'>Newer Posts &gt;&gt;</a></> : null }
+          { this.skip + this.limit < this.totalPosts ? <><a href={`/content/${this.currentPage + 1}`} className='btnContent float-left'>&lt;&lt; Older Posts</a></> : null }
         </div>
       </div>
     );
