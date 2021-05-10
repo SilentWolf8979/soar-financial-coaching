@@ -14,7 +14,8 @@ function Breadcrumbs() {
         />
       </Link>
       <p>/</p>
-      <Link to='/services'>Services Offered</Link>
+      { window.location.pathname.startsWith('/services') ? <><Link to='/services'>Services Offered</Link></> : null }
+      { window.location.pathname.startsWith('/content') ? <><Link to='/content'>Content</Link></> : null }
     </span>
   );
 }

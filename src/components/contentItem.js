@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Breadcrumbs from './breadcrumbs.js';
+
+var regex = new RegExp('(\\/content)((?!\\/+\\w)|(\\/\\d$))');
 
 const options = {  
   //renderMark: {
@@ -57,6 +60,7 @@ function ContentItem({data}) {
         <span>{updatedAtDate.toLocaleString('default', { month: 'long' }) + ' ' + updatedAtDate.getDate() + ', ' + updatedAtDate.getFullYear()}</span>
       </div>
       <div className='content'>
+        { !regex.test(window.location.pathname) ? <><Breadcrumbs/></> : null }
         { documentToReactComponents(data.fields.entry, options) }
       </div>
     </div>

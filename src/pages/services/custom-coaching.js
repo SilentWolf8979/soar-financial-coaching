@@ -8,9 +8,7 @@ function CustomCoaching() {
         <div className='margin'>
           <Image src="../images/ctaDandelion.jpg"></Image>
           <h2>Custom Coaching</h2>
-          <br/>
           <Breadcrumbs/>
-          <br/>
           <p>
             Here at Soar Financial Coaching it is understood that every client has unique challenges, strengths, personalities, and goals. 
             The process of customized coaching is to help you define your dreams, assess where you are in the journey, 

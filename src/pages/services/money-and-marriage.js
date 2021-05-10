@@ -8,9 +8,7 @@ function MoneyMarriage() {
         <div className='margin'>
           <Image src="../images/ctaCoupleHoldingHands.jpg"></Image>
           <h2>Money And Marriage</h2>
-          <br/>
           <Breadcrumbs/>
-          <br/>
           <p>
             Engaged? Newlyweds?  
             Getting remarried and know the damage that money issues can cause? 

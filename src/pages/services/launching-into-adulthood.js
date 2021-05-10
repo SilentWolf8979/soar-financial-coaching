@@ -8,9 +8,7 @@ function LaunchingAdulthood() {
         <div className='margin'>
           <Image src="../images/ctaGradOnSidewalk.jpg" className='vertical'></Image>
           <h2>Launching Into Adulthood</h2>
-          <br/>
           <Breadcrumbs/>
-          <br/>
           <p>
             Launching Into Adulthood is coaching intended for high school and college students as well as young adults who opt for alternate pathways to the workforce. 
             This kind of coaching can be done one-on-one or in small groups of up to 4 students.

@@ -89,10 +89,7 @@ class Content extends React.Component {
   render() {
     if (!this.state.hasContent) return null;
     if (this.state.isError) return <Error404/>;
-    console.log("skip: " + this.skip);
-    console.log("cp: " + this.currentPage);
-    console.log("limit: " + this.limit);
-    console.log("tp: " + this.totalPosts);
+
     return (
       <div className="App">
         <div className={ `pageContent ${ !this.contentRoot ? "noTop" : null }`}>
