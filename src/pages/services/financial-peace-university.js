@@ -1,9 +1,13 @@
 import { Button, Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function FinancialPeaceU() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - Services Offered - Financial Peace University</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='margin'>
           <Image src="../images/ctaHandcuffs.jpg"></Image>

@@ -1,9 +1,13 @@
 import { Button, Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function MoneyMarriage() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - Services Offered - Money And Marriage</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='margin'>
           <Image src="../images/ctaCoupleHoldingHands.jpg"></Image>
