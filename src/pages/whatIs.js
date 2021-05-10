@@ -1,4 +1,5 @@
 import { React, useRef } from "react";
+import { Helmet } from 'react-helmet';
 import { Accordion, Card } from 'react-bootstrap';
 
 function WhatIs() {
@@ -21,6 +22,9 @@ function WhatIs() {
   
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - What is a financial coach?</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='margin'>
           <h2>What is a financial coach?</h2>

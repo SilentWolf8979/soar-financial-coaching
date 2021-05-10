@@ -1,8 +1,9 @@
 import * as contentful from 'contentful';
 import React from 'react';
-import { withRouter } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
+import { withRouter } from 'react-router-dom';
 import ContentItem from '../components/contentItem.js';
-import Error404 from '../error404.js'
+import Error404 from '../error404.js';
 
 class Content extends React.Component {
 
@@ -92,6 +93,9 @@ class Content extends React.Component {
 
     return (
       <div className="App">
+        <Helmet>
+          <title>Soar Financial Coaching - Content</title>
+        </Helmet>
         <div className={ `pageContent ${ !this.contentRoot ? "noTop" : null }`}>
           { this.contentRoot ? <><h2>Content</h2><br/></> : null }
           

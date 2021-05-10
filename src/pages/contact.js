@@ -1,6 +1,11 @@
+import { Helmet } from 'react-helmet';
+
 function Contact() {
     return (
       <div className="App">
+        <Helmet>
+          <title>Soar Financial Coaching - Contact</title>
+        </Helmet>
         <div className='pageContent'>
           <div className='margin contact'>
             <h2>Contact Me</h2>

@@ -1,9 +1,13 @@
 import { Button, Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function LaunchingAdulthood() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - Services Offered - Launching Into Adulthood</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='margin'>
           <Image src="../images/ctaGradOnSidewalk.jpg" className='vertical'></Image>

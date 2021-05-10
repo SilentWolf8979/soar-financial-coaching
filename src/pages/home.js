@@ -1,9 +1,13 @@
 import { Button, Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching</title>
+      </Helmet>
       <div className="jumbotron">
         <h1>Gain control of your money</h1>
         <p>Start your journey toward freedom today</p>

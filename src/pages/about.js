@@ -1,8 +1,12 @@
 import { Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 function About() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - About Me</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='margin'>
           <Image src="../images/headShot.jpg"></Image>

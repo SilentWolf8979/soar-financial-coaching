@@ -1,9 +1,13 @@
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Services() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - Services Offered</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='narrowMargin'>
           <br/>

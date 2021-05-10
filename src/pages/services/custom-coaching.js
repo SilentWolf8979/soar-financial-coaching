@@ -1,9 +1,13 @@
 import { Button, Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import Breadcrumbs from '../../components/breadcrumbs.js';
 
 function CustomCoaching() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - Services Offered - Custom Coaching</title>
+      </Helmet>
       <div className='pageContent'>
         <div className='margin'>
           <Image src="../images/ctaDandelion.jpg"></Image>
