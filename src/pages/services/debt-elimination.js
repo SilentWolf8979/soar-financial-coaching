@@ -8,9 +8,7 @@ function DebtElimination() {
         <div className='margin'>
           <Image src="../images/ctaSunsetJumping.jpg"></Image>
           <h2>Debt Elimination</h2>
-          <br/>
           <Breadcrumbs/>
-          <br/>
           <p>
             Watching your paycheck handed out to creditors stinks! Owing money to others can make you feel like you can never get ahead. 
             Emergencies are more stressful. Wealth building seems like an impossible task. You know that if you don’t start now, 

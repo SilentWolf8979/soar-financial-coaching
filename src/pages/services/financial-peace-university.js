@@ -8,9 +8,7 @@ function FinancialPeaceU() {
         <div className='margin'>
           <Image src="../images/ctaHandcuffs.jpg"></Image>
           <h2>Financial Peace University</h2>
-          <br/>
           <Breadcrumbs/>
-          <br/>
           <p>
             Are you looking for someone to teach Dave Ramsey’s <u>Financial Peace University</u> at your church or organization? 
             You’ve come to the right place!  

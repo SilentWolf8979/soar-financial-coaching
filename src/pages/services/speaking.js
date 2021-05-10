@@ -8,9 +8,7 @@ function Speaking() {
         <div className='margin'>
           <Image src="../images/ctaPeopleAtTable.jpg"></Image>
           <h2>Speaking Engagements</h2>
-          <br/>
           <Breadcrumbs/>
-          <br/>
           <p>
             The first time I learned the basics of budgeting was at a MOPS (Mothers of Pre-Schoolers) meeting. 
             One of our members came in and talked about how she and her husband were taking an intentional approach with their money 
