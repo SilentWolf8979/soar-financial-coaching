@@ -24,8 +24,8 @@ class Content extends React.Component {
 
   // Production Account
   client = contentful.createClient({
-    space: '0ro9oshanqc6',
-    accessToken: 'qb14TskWdHhM5Cpl47EblMQFP8JHusdjARpU-WvLLmA'
+    space: 'ylqs5n9lhjzz',
+    accessToken: 'VLphswuSvcU-r0lfaeZ9doH_AJqz6NarJEtsR8vuUoU'
   })
 
   currentPost = this.props;
