@@ -396,14 +396,15 @@ a {
   padding: 0;
 
   a {
-    color: $brandPrimaryColor;
+    color: $brandPrimaryColor !important;
     display: inline-block;
     font-weight: bold;
     height: 100%;
+    text-decoration: none !important;
 
     &:hover {
-      color: $brandPrimaryColor;
-      text-decoration: underline;
+      color: $brandPrimaryColor !important;
+      text-decoration: underline !important;
     }
 
     &.logo {
