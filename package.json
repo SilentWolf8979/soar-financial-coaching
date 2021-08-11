@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.0.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "bootstrap": "^4.6.0",
     "contentful": "^8.4.2",
