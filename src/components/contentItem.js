@@ -20,8 +20,8 @@ const options = {
   renderNode: {
     [INLINES.HYPERLINK]: (node, children) => (
       <a href={node.data.uri}
-      target={`${node.data.uri.startsWith('http') ? '_blank' : '_self'}`}
-      rel={`${node.data.uri.startsWith('http') ? 'noopener noreferrer' : ''}`}
+        target={`${node.data.uri.startsWith('http') ? '_blank' : '_self'}`}
+        rel={`${node.data.uri.startsWith('http') ? 'noopener noreferrer' : ''}`}
       >{children[0][1]}</a>
     ),
     [BLOCKS.PARAGRAPH]: (node, children) => node.content.some(childNode => childNode.nodeType === `text` && childNode.marks.some(mark => mark.type === MARKS.CODE)) ? children : <p className='contentParagraph'>{children}</p>,
