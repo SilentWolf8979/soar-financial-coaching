@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "bootstrap": "^4.6.0",
-    "contentful": "^8.4.2",
+    "contentful": "^8.4.4",
     "cra-template": "1.1.2",
     "firebase": "^8.9.1",
     "react": "^17.0.2",
