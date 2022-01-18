@@ -24,26 +24,25 @@ let accessToken = 'VLphswuSvcU-r0lfaeZ9doH_AJqz6NarJEtsR8vuUoU';
 
 function Content() {
   let postId = useParams();
-  let contentRoot = false;
 
   const [posts, setPosts] = useState(null);
+
   useEffect(() => {
-  let query = {};
+    let query = {};
 
-  if (postId.postId === undefined || (!isNaN(postId.postId) && !isNaN(parseInt(postId.postId)))) {
-    if (postId.postId !== undefined) {
-      currentPage = parseInt(postId.postId);
-      skip = limit * currentPage;
+    if (postId.postId === undefined || (!isNaN(postId.postId) && !isNaN(parseInt(postId.postId)))) {
+      if (postId.postId !== undefined) {
+        currentPage = parseInt(postId.postId);
+        skip = limit * currentPage;
+      }
+
+      contentRoot = true;
+
+      query = `entries?access_token=${accessToken}&include=10&skip=${skip}&limit=${limit}`;
     }
-
-    contentRoot = true;
-
-    query = `entries?access_token=${accessToken}&include=10&skip=${skip}&limit=${limit}`;
-  }
-  else {
-    query = `entries?access_token=${accessToken}&include=10&content_type=blogPost&fields.url=/${postId.postId}`;
-  }
-  
+    else {
+      query = `entries?access_token=${accessToken}&include=10&content_type=blogPost&fields.url=/${postId.postId}`;
+    }
 
     window
       .fetch(`https://cdn.contentful.com/spaces/${space}/${query}`, {
