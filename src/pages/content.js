@@ -58,7 +58,7 @@ function Content() {
         isError = true;
       });
     },
-  []);
+  [postId.postId]);
 
 
 
