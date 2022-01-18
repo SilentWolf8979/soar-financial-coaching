@@ -18,12 +18,19 @@ const options = {
   //},
 
   renderNode: {
-    [INLINES.HYPERLINK]: (node, children) => (
-      <a href={node.data.uri}
-        target={`${node.data.uri.startsWith('http') ? '_blank' : '_self'}`}
-        rel={`${node.data.uri.startsWith('http') ? 'noopener noreferrer' : ''}`}
-      >{children[0][1]}</a>
-    ),
+    [INLINES.HYPERLINK]: (node, children) => {
+      return(
+        <a href={node.data.uri}
+          target={`${node.data.uri.startsWith('http') ? '_blank' : '_self'}`}
+          rel={`${node.data.uri.startsWith('http') ? 'noopener noreferrer' : ''}`}
+        >{children[0][1]}</a>
+      )
+    },
+    [INLINES.ASSET_HYPERLINK]: (node, children) => {
+      return (
+        <Link target='_blank' to={ node.data && node.data.target.fields.file.url ? node.data.target.fields.file.url : null }>{children}</Link>
+      )
+    },
     [BLOCKS.PARAGRAPH]: (node, children) => node.content.some(childNode => childNode.nodeType === `text` && childNode.marks.some(mark => mark.type === MARKS.CODE)) ? children : <p className='contentParagraph'>{children}</p>,
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
       var assetTagStyles = '';
