@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
@@ -13,4 +13,4 @@ class ScrollToTop extends React.Component {
   }
 }
 
-export default withRouter(ScrollToTop)
+export default ScrollToTop;

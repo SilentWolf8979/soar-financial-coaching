@@ -1,114 +1,94 @@
-import * as contentful from 'contentful';
-import React from 'react';
+import resolveResponse from 'contentful-resolve-response';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { withRouter } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ContentItem from '../components/contentItem.js';
 import Error404 from '../error404.js';
 
-class Content extends React.Component {
+let skip = 0;
+let limit = 3;
+let currentPage = 0;
+let totalPosts = 0;
+let contentRoot = false;
+let isError = false;
 
-  skip = 0;
-  limit = 3;
-  currentPage = 0;
-  totalPosts = 0;
+// Test Account
+//let space = '65qhu3hd5kiq';
+//let accessToken = '5o2CEEXjOouoqj1Uu1ISJSgrzc4lpontP5CWF7QAPD0';
 
-  state = {
-    posts: []
-  }
-  
-  // Test Account
-  //client = contentful.createClient({
-  //  space: '65qhu3hd5kiq',
-  //  accessToken: '5o2CEEXjOouoqj1Uu1ISJSgrzc4lpontP5CWF7QAPD0'
-  //})
+// Production Account
+let space = 'ylqs5n9lhjzz';
+let accessToken = 'VLphswuSvcU-r0lfaeZ9doH_AJqz6NarJEtsR8vuUoU';
 
-  // Production Account
-  client = contentful.createClient({
-    space: 'ylqs5n9lhjzz',
-    accessToken: 'VLphswuSvcU-r0lfaeZ9doH_AJqz6NarJEtsR8vuUoU'
-  })
 
-  currentPost = this.props;
-  contentRoot = false;
-  
-  componentDidMount() {
-    if (!this.currentPost.data) {
-      this.fetchPosts().then(this.setPosts);
-    }
-    else {
-      this.setState({
-        posts: [JSON.parse(this.currentPost.data)],
-        hasContent: true,
-      });
-    }
-  }
-  
-  fetchPosts = () => {
-    var regex = new RegExp('(\\/content)((?!\\/+\\w)|(\\/\\d$))');
 
-    var result = regex.exec(this.currentPost.location.pathname)
+function Content() {
+  let postId = useParams();
 
-    //if (this.currentPost.location.pathname.endsWith('/content')) {
-    if (result) {
-      if (result[2].substring(1)) {
-        this.currentPage = parseInt(result[2].substring(1));
-        this.skip = this.limit * this.currentPage;
+  const [posts, setPosts] = useState(null);
+
+  useEffect(() => {
+    let query = {};
+
+    if (postId.postId === undefined || (!isNaN(postId.postId) && !isNaN(parseInt(postId.postId)))) {
+      if (postId.postId !== undefined) {
+        currentPage = parseInt(postId.postId);
+        skip = limit * currentPage;
       }
 
-      this.contentRoot = true;
-      return this.client.getEntries(
-      {
-        'skip': this.skip,
-        'limit': this.limit
-      });
+      contentRoot = true;
+
+      query = `entries?access_token=${accessToken}&include=10&skip=${skip}&limit=${limit}`;
     }
     else {
-      return this.client.getEntries(
-      {
-        content_type: 'blogPost',
-        'fields.url': this.currentPost.location.pathname.replace('/content', '')
-      });
+      query = `entries?access_token=${accessToken}&include=10&content_type=blogPost&fields.url=/${postId.postId}`;
     }
+
+    window
+      .fetch(`https://cdn.contentful.com/spaces/${space}/${query}`, {
+        method: 'GET',
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        totalPosts = data.total;
+
+        setPosts(resolveResponse(data));
+      })
+      .catch((e) => {
+        isError = true;
+      });
+    },
+  [postId.postId]);
+
+
+
+  if (!posts) {
+    return "Loading...";
   }
 
-  setPosts = response => {
-    if (response.total > 0) {
-      this.totalPosts = response.total;
-      this.setState({
-        posts: response.items,
-        hasContent: true,
-      });
-    }
-    else {
-      this.setState({
-        hasContent: true,
-        isError: true,
-      });
-    }
+  if (isError || totalPosts === 0) {
+    return <Error404 />
   }
 
-  render() {
-    if (!this.state.hasContent) return null;
-    if (this.state.isError) return <Error404/>;
 
-    return (
-      <div className="App">
-        <Helmet>
-          <title>Soar Financial Coaching - Content</title>
-        </Helmet>
-        <div className={ `pageContent ${ !this.contentRoot ? "noTop" : null }`}>
-          { this.contentRoot ? <><h2>Content</h2><br/></> : null }
-          
-          { this.state.posts.map(({fields}, i) =>
-            <ContentItem key={i} data={this.state.posts[i]} />
-          )}
 
-          { this.skip > 0 ? <><a href={this.currentPage - 1 > 0 ? `/content/${this.currentPage - 1}` : '/content' } className='btnContent float-right'>Newer Posts &gt;&gt;</a></> : null }
-          { this.skip + this.limit < this.totalPosts ? <><a href={`/content/${this.currentPage + 1}`} className='btnContent float-left'>&lt;&lt; Older Posts</a></> : null }
-        </div>
+  return (
+    <div className="App">
+      <Helmet>
+        <title>Soar Financial Coaching - Content</title>
+      </Helmet>
+      <div className={ `pageContent ${ !contentRoot ? "noTop" : null }`}>
+        { contentRoot ? <><h2>Content</h2><br/></> : null }
+        
+        { posts.map(({fields}, i) =>
+          <ContentItem key={i} data={posts[i]} />
+        )}
+
+        { skip > 0 ? <><a href={currentPage - 1 > 0 ? `/content/${currentPage - 1}` : '/content' } className='btnContent float-right'>Newer Posts &gt;&gt;</a></> : null }
+        { skip + limit < totalPosts ? <><a href={`/content/${currentPage + 1}`} className='btnContent float-left'>&lt;&lt; Older Posts</a></> : null }
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default withRouter(Content);
+export default Content;

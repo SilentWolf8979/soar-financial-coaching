@@ -2,7 +2,7 @@ import './App.scss';
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
 } from 'react-router-dom';
 import MainNav from './components/mainNav.js';
@@ -51,24 +51,24 @@ function App() {
       <ScrollToTop>
         <MainNav />
         
-        <Switch>
-          <Route exact path='/services/custom-coaching' render={() => <CustomCoaching/>}/>
-          <Route exact path='/services/debt-elimination' render={() => <DebtElimination/>}/>
-          <Route exact path='/services/financial-peace-university' render={() => <FinancialPeaceU/>}/>
-          <Route exact path='/services/launching-into-adulthood' render={() => <LaunchingAdulthood/>}/>
-          <Route exact path='/services/money-and-marriage' render={() => <MoneyMarriage/>}/>
-          <Route exact path='/services/speaking' render={() => <Speaking/>}/>
-          <Route exact path='/about' render={() => <About/>}/>
-          <Route exact path='/book' render={() => <Book/>}/>
-          <Route exact path='/contact' render={() => <Contact/>}/>
-          <Route exact path='/content' render={() => <Content/>}/>
-          <Route path='/content/:contentItem' component={(props) => <Content data={props.location.state ? JSON.stringify(props.location.state.data, null, 2) : null}/>}/>
-          <Route exact path='/legal' render={() => <Legal/>}/>
-          <Route exact path='/services' render={() => <Services/>}/>
-          <Route exact path='/whatis' render={() => <WhatIs/>}/>
-          <Route exact path='/' render={() => <Home/>}/>
-          <Route path="*" render={() => <Error404/>}/>
-        </Switch>
+        <Routes>
+          <Route exact path='/services/custom-coaching' element={<CustomCoaching/>}/>
+          <Route exact path='/services/debt-elimination' element={<DebtElimination/>}/>
+          <Route exact path='/services/financial-peace-university' element={<FinancialPeaceU/>}/>
+          <Route exact path='/services/launching-into-adulthood' element={<LaunchingAdulthood/>}/>
+          <Route exact path='/services/money-and-marriage' element={<MoneyMarriage/>}/>
+          <Route exact path='/services/speaking' element={<Speaking/>}/>
+          <Route exact path='/about' element={<About/>}/>
+          <Route exact path='/book' element={<Book/>}/>
+          <Route exact path='/contact' element={<Contact/>}/>
+          <Route exact path='/content' element={<Content/>}/>
+          <Route path='/content/:postId' element={<Content key={window.location.pathname}/>}/>
+          <Route exact path='/legal' element={<Legal/>}/>
+          <Route exact path='/services' element={<Services/>}/>
+          <Route exact path='/whatis' element={<WhatIs/>}/>
+          <Route exact path='/' element={<Home/>}/>
+          <Route path="*" element={<Error404/>}/>
+        </Routes>
 
         <FooterNav />
       </ScrollToTop>
