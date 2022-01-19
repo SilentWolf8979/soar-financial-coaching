@@ -20,9 +20,9 @@ function MainNav() {
             className="d-inline-block align-top App-logo"
             fill="#7fa67a"
           />
-          <p className='d-none d-sm-block float-right'>Soar Financial Coaching</p>
+          <p className='d-none d-sm-block float-end'>Soar Financial Coaching</p>
         </Navbar.Brand>
-        <Button href='/book' className='float-right'>Book Your Consultation</Button>
+        <Button href='/book' className='float-end'>Book Your Consultation</Button>
       </div>
       <Navbar.Collapse id='main-navbar-nav'>
         <Nav>

@@ -65,7 +65,7 @@ function App() {
           <Route path='/content/:postId' element={<Content key={window.location.pathname}/>}/>
           <Route exact path='/legal' element={<Legal/>}/>
           <Route exact path='/services' element={<Services/>}/>
-          <Route exact path='/whatis' element={<WhatIs/>}/>
+          <Route exact path='/whatIs' element={<WhatIs/>}/>
           <Route exact path='/' element={<Home/>}/>
           <Route path="*" element={<Error404/>}/>
         </Routes>

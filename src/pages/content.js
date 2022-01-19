@@ -84,7 +84,7 @@ function Content() {
           <ContentItem key={i} data={posts[i]} />
         )}
 
-        { skip > 0 ? <><a href={currentPage - 1 > 0 ? `/content/${currentPage - 1}` : '/content' } className='btnContent float-right'>Newer Posts &gt;&gt;</a></> : null }
+        { skip > 0 ? <><a href={currentPage - 1 > 0 ? `/content/${currentPage - 1}` : '/content' } className='btnContent float-end'>Newer Posts &gt;&gt;</a></> : null }
         { skip + limit < totalPosts ? <><a href={`/content/${currentPage + 1}`} className='btnContent float-left'>&lt;&lt; Older Posts</a></> : null }
       </div>
     </div>
