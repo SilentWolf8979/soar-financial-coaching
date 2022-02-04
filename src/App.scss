@@ -202,6 +202,32 @@ a {
   }
 }
 
+.carousel {
+  .carousel-control-next,
+  .carousel-control-prev {
+    visibility: hidden;
+  }
+
+  .carousel-indicators {
+    bottom: -2.25em;
+
+    button {
+      background-color: $brandWhite;
+      border-radius: 50%;
+      height: 0.75em;
+      width: 0.75em;
+
+      &.active {
+        background-color: $brandDarkBlue;
+      }
+    }
+  }
+
+  .carousel-item {
+    transition: opacity 1s ease-in-out !important;
+  }
+}
+
 .homeContent {
   position: relative;
   top: -5em;

@@ -1,4 +1,4 @@
-import { Button, Col, Image, Row } from 'react-bootstrap';
+import { Button, Carousel, Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -41,14 +41,37 @@ function Home() {
         <Row className='justify-content-center'>
           <Col xs={12} className='ctaTextOnly'>
             <blockquote className='testimonial'>
-              <p>
-                Working with Anne for financial counseling has been a fantastic experience. First off, she is an amazing person on her own. 
-                Add in her knowledge and passion for personal finances and she is the person you want on your team! 
-                She takes a well rounded approach to finances that isn’t just numbers but considers your dreams, needs, and goals as well. 
-                Anne is friendly, genuine, and never judgemental. She comes prepared to each meeting with lots of ideas and tools. 
-                I could not recommend her enough and am thankful we made the decision to work with her!
-              </p>
-              <footer className="blockquote-footer">Abbey & Eric</footer>
+              <Carousel fade interval={null}>
+                <Carousel.Item>
+                  <div className='d-flex h-100 align-items-center'>
+                    <div>
+                      <p>
+                        Working with Anne for financial counseling has been a fantastic experience. First off, she is an amazing person on her own. 
+                        Add in her knowledge and passion for personal finances and she is the person you want on your team! 
+                        She takes a well rounded approach to finances that isn’t just numbers but considers your dreams, needs, and goals as well. 
+                        Anne is friendly, genuine, and never judgemental. She comes prepared to each meeting with lots of ideas and tools. 
+                        I could not recommend her enough and am thankful we made the decision to work with her!
+                      </p>
+                      <footer className="blockquote-footer">Abbey & Eric</footer>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div className='d-flex h-100 align-items-center'>
+                    <div>
+                      <p>
+                        Anne has been a Godsend to us. My wife and I have never been so transparent in our finances in the 15 years that we've been married. 
+                        Thanks to her counseling and coaching, I truly do see a change in how we approach our finances and how that positivity has touched all 
+                        aspects of our marriage. Communication and transparency is key and if you are having trouble (or maybe don't even realize there are issues) 
+                        I recommend reaching out to her. In just a few short sessions, Anne has helped us organize and understand our financial life in a way that 
+                        actually makes us look forward to looking at our monthly budget! Her positive and productive approach is both refreshing and empowering. 
+                        We're using the tools she's taught us on a daily basis.
+                      </p>
+                      <footer className="blockquote-footer">Tim</footer>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
               <div className='pointer'></div>
             </blockquote>
           </Col>
